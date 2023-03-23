@@ -1,6 +1,9 @@
-const filterByCategory = (products, filterBy) => {
-  console.log("TODO! Filter products by:", filterBy);
-  return products;
+  const filterByCategory = (products, filterBy) => {
+    if (filterBy === "all") {
+      return products;
+    }
+  
+    return products.filter((product) => product.metadata.category ===filterBy);
 };
 
 export default filterByCategory;
